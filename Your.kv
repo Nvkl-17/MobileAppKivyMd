@@ -1,0 +1,49 @@
+MDScreen:
+    name:"Your"
+    MDFloatLayout:
+        md_bg_color: [1,1,1,1]
+        Carousel:
+            id: carousel
+            #scroll_timeout: 0
+            on_current_slide: app.current_slide(self.index)
+            MDFloatLayout:
+                Image:
+                    source: r'C:\Users\91824\Downloads\IIT_Madras_Logo.svg.png'
+                    pos_hint: {'center_x': 0.5,'center_y': 0.7}
+                    size_hint: .8, .8
+
+                MDLabel:
+                    text: 
+                        'The HMD project from research team to explore neuro-engineering . This application helps to predict and analyse !'
+                    pos_hint: {'center_x': 0.5,'center_y': 0.35}
+                    size_hint_x: .92
+                    font_size: sp(13)
+                    font_name: 'Poppins-SemiBold.ttf'
+                    halign: 'center'
+                    color: [0,0,0,1]
+
+                Button:
+                    text: 'GET STARTED'
+                    background_color:[0,0,0,0]
+                    font_name: 'Poppins-Bold.ttf'
+                    font_size: sp(13)
+                    size_hint: .6, .075
+                    color: 1 , 1 , 1 , 1
+                    pos_hint: {'center_x': 0.5,'center_y': 0.20}
+                    elevation: 15
+                    on_release:
+                        root.manager.transition.direction = "left"
+                        root.manager.current = "login"
+                    canvas.before:
+                        Color:
+                            rgb: rgba(50, 44, 106, 255)
+                        RoundedRectangle:
+                            size: self.size
+                            pos: self.pos
+                            radius: [25]
+
+
+
+         
+        
+        

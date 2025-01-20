@@ -1,0 +1,115 @@
+MDScreen:
+    name:"signup"
+    MDFloatLayout:
+        md_bg_color: [1,1,1,1]
+        Carousel:
+            id: carousel
+            #scroll_timeout: 0
+            on_current_slide: app.current_slide(self.index)
+            MDFloatLayout:
+                Image:
+                    source: r"C:\Users\91824\Downloads\juicy-boy-with-laptop-installing-security-passwords-shield-and-lock-on-his-pc-and-phone.png"
+                    pos_hint: {'center_x': 0.5,'center_y': 0.80}
+                    size_hint: .52, .52
+
+                MDLabel:
+                    text: 'create an account!'
+                    pos_hint: {'center_x': 0.62,'center_y': 0.62}
+                    size_hint_x: .92
+                    font_size: sp(26)
+                    font_name: 'Poppins-Regular.ttf'
+                    color: [0,0,0,1]
+
+                MDFloatLayout:
+                    size_hint:.7,.07
+                    pos_hint:{"center_x":.5,"center_y":.52}
+                    TextInput:
+                        id:em
+                        hint_text:"Email"
+                        font_name: 'Poppins-Regular.ttf'
+                        size_hint_y :.75
+                        pos_hint:{"center_x":.43,"center_y":.5}
+                        background_color:1,1,1,0
+                        foreground_color:rgba(0,0,59,255)
+                        font_size:"14sp"
+                        cursor_width:"2sp"
+                        multiline:False
+
+                MDFloatLayout:
+                    pos_hint:{"center_x":.45,"center_y":0}
+                    size_hint_y:.03
+                    mg_bg_color:rgba(178,178,178,255)
+
+
+                MDFloatLayout:
+                    size_hint:.7,.07
+                    pos_hint:{"center_x":.5,"center_y":.42}
+                    TextInput:
+                        id:pswd
+                        hint_text:"Password"
+                        font_name: 'Poppins-Regular.ttf'
+                        size_hint_y :.75
+                        pos_hint:{"center_x":.43,"center_y":.38}
+                        background_color:1,1,1,0
+                        foreground_color:rgba(0,0,59,255)
+                        font_size:"14sp"
+                        cursor_width:"2sp"
+                        multiline:False
+                        password:True
+
+
+                MDFloatLayout:
+                    pos_hint:{"center_x":.45,"center_y":0}
+                    size_hint_y:.03
+                    mg_bg_color:rgba(178,178,178,255)
+
+
+                MDFloatLayout:
+                    size_hint:.7,.07
+                    pos_hint:{"center_x":.5,"center_y":.32}
+                    TextInput:
+                        hint_text:"ReEnter Password"
+                        font_name: 'Poppins-Regular.ttf'
+                        size_hint_y :.75
+                        pos_hint:{"center_x":.43,"center_y":.28}
+                        background_color:1,1,1,0
+                        foreground_color:rgba(0,0,59,255)
+                        font_size:"14sp"
+                        cursor_width:"2sp"
+                        multiline:False
+                        password:True
+
+
+                MDFloatLayout:
+                    pos_hint:{"center_x":.45,"center_y":0}
+                    size_hint_y:.03
+                    mg_bg_color:rgba(178,178,178,255)
+
+
+
+                Button:
+                    text: 'Register'
+                    background_color:[0,0,0,0]
+                    font_name: 'Poppins-Bold.ttf'
+                    font_size: sp(13)
+                    size_hint: .6, .075
+                    color: 1 , 1 , 1 , 1
+                    pos_hint: {'center_x': 0.5,'center_y': 0.19}
+                    elevation: 15
+                    on_release:
+                        app.signup()
+
+
+                    canvas.before:
+                        Color:
+                            rgb: rgba(50, 44, 106, 255)
+                        RoundedRectangle:
+                            size: self.size
+                            pos: self.pos
+                            radius: [25]
+
+
+
+         
+        
+        

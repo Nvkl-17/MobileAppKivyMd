@@ -1,0 +1,57 @@
+MDScreen:
+    name: "result"
+
+    MDFloatLayout:
+
+        MDTextField:
+            id: date_field
+            hint_text: "Select Date"
+            on_focus: if self.focus: app.show_date_picker()
+            pos_hint: {"center_x": 0.6, "top": 0.8}
+
+        MDRaisedButton:
+            text: "Submit"
+            on_release: app.show_selected_date()
+            pos_hint: {"center_x": 0.6, "top": 0.7}
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: dp(8)
+
+            MDCheckbox:
+                id: checkbox1
+                size_hint: None, None
+                size: dp(38), dp(48)
+                active: True
+
+            MDLabel:
+                text: "Lead"
+                pos_hint: {'center_x': 0.5,'center_y': 0.60}
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: dp(8)
+
+            MDCheckbox:
+                id: checkbox2
+                size_hint: None, None
+                size: dp(28), dp(48)
+                active: True
+
+            MDLabel:
+                text: "Cadmium"
+                pos_hint: {'center_x': 0.5,'center_y': 0.50}
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: dp(8)
+
+            MDCheckbox:
+                id: checkbox3
+                size_hint: None, None
+                size: dp(18), dp(48)
+                active: True
+
+            MDLabel:
+                text: "Mercury"
+                pos_hint: {'center_x': 0.5,'center_y': 0.40}
